@@ -4,7 +4,8 @@
     "description": "Playwright browser automation service for SmartChoose - extracts product data from any e-commerce site",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
+        "start": "npx playwright install chromium --with-deps && node server.js",
+        "postinstall": "npx playwright install chromium --with-deps",
         "install-browsers": "npx playwright install chromium --with-deps"
     },
     "dependencies": {
